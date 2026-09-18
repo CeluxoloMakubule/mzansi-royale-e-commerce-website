@@ -20,7 +20,7 @@
                     <a href="About.html">About</a>
                     <a href="Contact.html">Contact</a>
                 </nav>
-                <button class="cart-btn">View Cart(<span id="items-count">0</span>)</button>
+                <button class="cart-btn" onclick="toggleCartGrid()">View Cart(<span id="items-count">0</span>)</button>
            </header>
 
            <section class="home">
@@ -34,14 +34,33 @@
                   </div>
 
                   <div class="home-buttons">
-                    <a href="menu.html" class="btn-menu"><button>Explore Our Menu</button> </a>
-                    <a href="about.html" class="btn-about"><button>Our Story</button></a>
+                    <a href="menu.html" class="btn-menu"><button class="action-btn">Explore Our Menu</button> </a>
+                    <a href="about.html" class="btn-about"><button class="action-btn">Our Story</button></a>
                   </div>
 
                   <div class="home-image">
                     <img src="../images/chef.jpg" alt="Chef Recommendation Meal">
                   </div>
            </section>
+
+          <div id="cart-sidebar" class="cart-sidebar">
+              <div class="cart-header">
+                <h3>Your Order:</h3>
+                <button class="close-btn" onclick="toggleCartGrid()">&times</button>
+              </div>
+
+              <div id="cart-items-container">
+                <p class="empty-message>Your cart is empty."></p>
+              </div>
+
+              <div class="cart-footer">
+                <div class="total-row">
+                    <strong>Total:</strong>
+                    <span id="cart-total-price">R 0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="setupCheckout()">Proceed to Checkout</button>
+              </div>
+          </div>
 
            <footer>
              <p class="copyright">&#169 2026 Mzansi Royale. All rights reserved</p>
