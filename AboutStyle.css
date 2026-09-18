@@ -1,0 +1,119 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'DM Sans',sans-serif;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar{
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background:transparent;
+}
+
+.logo
+{
+font-family: 'Playfair Display' serif;
+font-size: 26px;
+font-weight: 700;
+color: black;
+}
+
+.logo span{
+    color: green;
+}
+
+nav{
+    font-size: 20px;
+     display: flex;
+     gap: 35px;
+ }
+
+ .about {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1; 
+}
+
+.about-content {
+    background: transparent;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.intro{
+    text-align: center;
+    background: transparent;
+    color:black;
+}
+
+.intro h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color:black;
+}
+
+p{
+    color:gray;
+    font-size: 1.2rem;
+    font-weight: 300;
+
+}
+
+h3{
+font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    display: inline-block;
+    padding-bottom: 5px;
+
+}
+
+.values-section ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.values-section li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+}
+
+.values-section li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+footer{
+    background:transparent;
+    color:#77756d;
+    text-align: center;
+    padding: 45px 20px 25px;
+}
+
+.copyright{
+    border-top: 1px solid gray;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 15px;
+}
