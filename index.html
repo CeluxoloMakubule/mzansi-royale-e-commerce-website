@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mzansi Royale</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+           <header class="navbar">
+                <div class="logo">
+                    <i><span>Mzansi</span> Royale</i>
+                </div>
+
+                <nav>
+                    <a href="#home-section">Home</a>
+                    <a href="#menu-section">Menu</a>
+                    <a href="#about-section">AboutUs</a>
+                    <a href="#contact-section">ContactUs</a>
+                </nav>
+                <button class="cart-btn" onclick="toggleCartGrid()">View Cart(<span id="items-count">0</span>)</button>
+           </header>
+           
+           <!--This is my home section -->
+           <section id="home-section">
+
+                  <div class="home-content">
+                    <p class="small-heading">WELCOME TO MZANSI ROYALE</p>
+                    <h1>A Taste of South Africa Delivered to Your Doorstep.</h1>
+                    <p class="home-text">
+                        Experience Mzansi flavours,traditional recipes, and unforgettable meals made with love.
+                    </p>
+                  </div>
+
+                  <div class="home-buttons">
+                    <a href="#menu-section" class="btn-menu"><button class="action-btn">Explore Our Menu</button> </a>
+                    <a href="#about-section" class="btn-about"><button class="action-btn">Our Story</button></a>
+                  </div>
+
+                  <div class="home-image">
+                    <img src="./images/chef.jpg" alt="Chef Recommendation Meal">
+                  </div>
+           </section>
+          
+          <!--This is my menu section -->
+          <section id="menu-section">
+                <h1>Menu:</h1>
+                <div class="search">
+                      <input type="search" id="menu-search" placeholder="Search our menu">
+                </div>
+                <h2>Meals:</h2>
+
+                <div class="menu-grid">
+                    <div class="menu-item">
+                     <img src =./images/meal1.jpg alt="Traditional Platter" class="menu-item-img">
+                     <h3>Traditional Platter</h3>
+                     <p class="description">Traditional slow-cooked tripe served with warm Chicken feet,beef stew,fluffy dumplings with 3 extra salads.</p>
+                     <p class="price">R 235.00</p>
+                     <button class="add-to-cart-btn" data-name="Traditional Platter" data-price="235.00" >Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item">
+                    <img src="./images/meal2.jpg" alt="Flame-Grilled Chicken Quater" class="menu-item-img">
+                    <h3>Flame-Grilled Chicken Quater</h3>
+                    <p class="description">Served with Peri-Peri/BBQ sauce and Regular Chips.</p>
+                    <p class="price">R 65,50</p>
+                    <button class="add-to-cart-btn" data-name="Flame-Grilled Chicken Quater" data-price="65.50">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item">
+                         <img src="./images/meal3.jpg" alt="Flame-Grilled Beef,Wors & Chicken" class="menu-item-img">
+                         <h3>Flame-Grilled Beef,Wors & Chicken</h3>
+                         <p class="description">Served with warm Pap,Hot Chakalaka & Tomato Salad.</p>
+                         <p class="price">R 350,00</p>
+                         <button class="add-to-cart-btn" data-name="Flame-Grilled Beef,Wors & Chicken" data-price="350.00" onclick="addToCart">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="./images/meal4.jpg" alt="Royale Kota" class="menu-item-img">
+                        <h3>The Royale Kota</h3>
+                        <p class="description">Has 2 Viennas,Cheese,Polony & Chips.</p>
+                        <p class="price">R 35,00</p>
+                        <button class="add-to-cart-btn" data-name="The Royale Kota" data-price="35.00" onclick="addToCart">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="./images/meal5.jpg" alt="Royale Amagwinya" class="menu-item-img">
+                        <h3>The Royale Amagwinya</h3>
+                        <p class="description">Served with 2 Russians,3 slices 0f Cheese,2 Slices of Polony,Atchaar & Regular Chips.</p>
+                        <p class="price">R 65,00</p>
+                        <button class="add-to-cart-btn" data-name="Flame-Grilled Beef,Wors & Chicken" data-price="65.00" onclick="addToCart">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="./images/meal6.jpg" alt="meal4One" class="menu-item-img">
+                        <h3>The Royale Meal For 1</h3>
+                        <p class="description">Small Wors served with Uphuthu & Chakalaka</p>
+                        <p class="price">R 35,00</p>
+                        <button class="add-to-cart-btn" data-name="Flame-Grilled Beef,Wors & Chicken" data-price="35.00" onclick="addToCart">Add to Cart</button>
+                    </div>
+
+                </div> 
+
+                <h2>Refreshing Drinks:</h2>
+                <div class="menu-grid">
+                      <div class="menu-item">
+                          <img src="./images/Juice.jpg" alt="Royale Juice" class="menu-item-img">
+                          <h3>Royale Juice</h3>
+                          <p class="description">Orange/Mango/Apple Juice.</p>
+                          <p class="price">R 22,00</p>
+                          <button class="add-to-cart-btn" data-name="Royale Juice" data-price="22.00" onclick="addToCart">Add to Cart</button>
+                      </div>
+
+                      <div class="menu-item">
+                          <img src="./images/drink.jpg" alt="Soft Drink(440ml)" class="menu-item-img">
+                          <h3>Soft Drink(440ml)</h3>
+                          <p class="description">Coke/Sprite Soft Drink.</p>
+                          <p class="price">R 20,00</p>
+                          <button class="add-to-cart-btn" data-name="Soft Drink(440ml)" data-price="20.00" onclick="addToCart">Add to cart</button>
+                      </div>
+
+                      <div class="menu-item">
+                          <img src="./images/wine.jpg" alt="Vineyard Wine" class="menu-item-img">
+                          <h3>Vineyard Wine</h3>
+                          <p class="description">A Bottle of fresh South African Wine.</p>
+                          <p class="price">R75,00</p>
+                          <button class="add-to-cart-btn" data-name="Vineyard Wine" data-price="75.00" onclick="addToCart">Add to Cart</button>
+                      </div>
+                      
+                </div>
+
+                <h2>Sweet Desserts:</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="./images/dessert1.jpg" alt="Royale Ice Cream" class="menu-item-img">
+                        <h3>Royale Ice Cream</h3>
+                        <p class="description">Cold Scoops Of Vanilla/Strawberry/Chocolate Ice Cream.</p>
+                        <p class="price">R 55,00</p>
+                        <button class="add-to-cart-btn" data-name="Ice Cream" data-price="55.00" onclick="addToCart">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+              <!--This is my aboutUs section -->
+
+              <section id="about-section">
+             
+                <div class="intro">
+                <h1>A Taste of South Africa Delivered to Your Doorstep.</h1>
+                <p>
+                Experience Mzansi flavours,traditional recipes, and unforgettable meals made with love.
+                </p>
+                </div>
+
+               <div class="story-section">
+               <h3>Our Story</h3>
+               <p>Founded with a passion for local cooking skills, Mzansi Royale looks to bring different cultures together through meals with a taste of home.
+                As a kitchen we prioritize freshness, speed, and quality. We source our ingredients from local farmers. 
+               </p>
+               </div>
+
+               <div  class="values-section">
+               <h3>Why Choose Mzansi Royale?</h3>
+               <ul>
+                   <li><strong>Authentic Recipes:</strong> Our dishes are prepared with traditional recipes and spices</li>
+                   <li><strong>Convenient Ordering:</strong> Browser our online store,customize your meal,and checkout in minutes.</li>
+                   <li><strong>Freshly Prepred:</strong>We don't cook until you order, Ensuring maximum flavour and quality upon arrival.</li>
+               </ul>
+               </div>
+
+           </section>
+
+              <!--This is my contactUS section -->
+             <section id="contact-section">
+
+              <div class="contact">
+           <h2>Get In Touch</h2>
+           <p>Have questions about your order,delivery areas,or catering options.Reach Out To Our Team and We will get right back to you.</p>
+            
+           <div class="contact-layout">
+             <h3>Contact Details:</h3>
+               <div class="contact-info">
+                  
+
+                   <div class="info-block">
+                       <h4>Address:</h4>
+                       <p> 123 White Street,<br>Rosebank,Johannesburg<br>2196</p>
+                   </div>
+
+                   <div class="info-block">
+                       <h4>Phone:</h4>
+                       <p>012 343 675</p>
+                   </div>
+
+                   <div class="info-block">
+                       <h4>Email:</h4>
+                       <p>orders@mzansiroyale.co.za</p>
+                   </div>
+
+                   <div class="info-block">
+                       <h4>Operating Hours:</h4>
+                       <p>Monday-Saturday: 10:00-21:00<br>Sunday: 11:00-18:00</p>
+                   </div>
+               </div>
+           </div>
+
+           <div class="complaints-form">
+               <h3>Complaints/Suggestions:</h3>
+               <form action="#" method="POST">
+                   <div class="form-group">
+                          <label for="name">Name:</label>
+                          <input type="text" id="name" name="name" required placeholder="Turner Solane">
+                   </div>
+
+                   <div class="form-group">
+                     <label for="email">Email Address:</label>
+                     <input type="text" id="email" name="email" required placeholder="name@gmail.com">    
+                  </div>
+
+                  <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required placeholder="Type Complaint/Suggestions Here(Include Order Number)" ></textarea>   
+                  </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+               </form>
+           </div>
+        </div>
+        </section>
+
+          <!--This is my cart section -->
+          <div id="cart-sidebar" class="cart-sidebar">
+              <div class="cart-header">
+                <h3>Your Order:</h3>
+                <button class="close-btn" onclick="toggleCartGrid()">&times</button>
+              </div>
+
+              <div id="cart-items-container">
+                <p class="empty-message>Your cart is empty."></p>
+              </div>
+
+              <div class="cart-footer">
+                <div class="total-row">
+                    <strong>Total:</strong>
+                    <span id="cart-total-price">R 0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="setupCheckout()">Proceed to Checkout</button>
+              </div>
+          </div>
+
+           <footer>
+             <p class="copyright">&#169 2026 Mzansi Royale. All rights reserved</p>
+           </footer>
+    </body>
+</html>
