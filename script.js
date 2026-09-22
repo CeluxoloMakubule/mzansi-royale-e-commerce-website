@@ -159,5 +159,76 @@ addToCartButtons.forEach(button => {
 		updateCart();
 
 
+//COMPLAINTS / SUGGESTIONS FORM//
+
+const contactForm = document.querySelector(".complaints-form form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (event) {
+
+        
+        event.preventDefault();
+
+        const name = document
+            .getElementById("name")
+            .value
+            .trim();
+
+        const email = document
+            .getElementById("email")
+            .value
+            .trim();
+
+        const message = document
+            .getElementById("message")
+            .value
+            .trim();
+
+        if (name === "") {
+            alert("Please enter your name.");
+            return;
+        }
+
+
+     
+        if (email === "") {
+            alert("Please enter your email address.");
+            return;
+        }
+
+        const emailPattern =/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        if (message === "") {
+            alert("Please enter your complaint or suggestion.");
+            return;
+        }
+
+        if (message.length < 10) {
+            alert(
+                "Please provide a little more detail " +
+                "about your complaint or suggestion."
+            );
+            return;
+        }
+
+
+        alert(
+            `Thank you, ${name}!\n\n` +
+            "Your complaint/suggestion has been received.\n\n" +
+            "The Mzansi Royale team will get back to you soon."
+        );
+
+        contactForm.reset();
+
+    });
+
+}
+```
 
 
