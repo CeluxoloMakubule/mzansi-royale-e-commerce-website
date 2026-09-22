@@ -58,17 +58,19 @@ nav{
 .cart-btn span{
     color: orange;
 }
-/* menu section decoration*/
-.home{
+/* home section decoration*/
+#home-section{
     min-height: 590px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 7%;
+    padding: 120px 7% 60px;
     gap: 50px;
+    box-sizing: border-box;
 }
 
 .home-content{
+    flex:1;
     max-width: 530px;
 }
 
@@ -80,7 +82,7 @@ nav{
     margin-bottom: 18px;
 }
 
-h1{
+#home-section h1{
     font-family: 'Playfair Display' serif;
     font-size: clamp(45px,5vw,72px);
     line-height: 1.08;
@@ -300,7 +302,7 @@ font-size: 1.8rem;
 }
 
 /*contact section decoration*/
-.contact-section{
+#contact-section{
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
@@ -319,12 +321,14 @@ font-size: 1.8rem;
     max-width: 700px;
     margin: 0 auto 40px auto;
     font-size: 1.1rem;
+    line-height:1.7;
     color: gray;
 }
 .contact-layout{
     display: grid;
-    gap: 40px;
+    gap: 50px;
     align-items: start;
+    margin-bottom: 50px;
 }
 .contact-info{
     display: grid;
@@ -342,7 +346,7 @@ font-size: 1.8rem;
     flex:1;
 }
 
-h3{
+.contact-layout h3{
     font-size: 1.6rem;
     color: black;
     margin-bottom: 20px;
@@ -355,9 +359,9 @@ h3{
 }
 
 .info-block h4{
-    color:midnightblue;
+    color:green;
     font-size: 1,1rem;
-    margin-bottom: 5px;
+    margin-bottom: 0 0 8px 0;
 }
 
 .form-group{
