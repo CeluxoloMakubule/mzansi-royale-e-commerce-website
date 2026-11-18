@@ -229,6 +229,3 @@ if (contactForm) {
     });
 
 }
-
-
-
